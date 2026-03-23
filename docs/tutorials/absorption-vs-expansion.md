@@ -86,7 +86,7 @@ The wall wins. Buyers could not muster enough capital to consume the resting sup
 - [Depth](/docs/primitives/depth) — the supply wall and its depletion
 - [Trade Flow](/docs/primitives/trade-flow) — aggressive buying into the wall
 - [Trade Profile](/docs/primitives/trade-profile) — size tier of the flow (institutional vs retail)
-- [Log(A/B) Depth](/docs/primitives/log-depth) — structural imbalance at the wall vs near mid
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth) — structural imbalance at the wall vs near mid
 - [Displacement](/docs/primitives/displacement) — how extended the ratio is
 - [SLS](/docs/primitives/sls) — gravity confirming structural shift
 - [Net Imbalance](/docs/primitives/net-imbalance) — aggregate vs near-mid structural reading

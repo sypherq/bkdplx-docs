@@ -1,54 +1,65 @@
 ---
-id: ratio-price
 title: Ratio Price
-sidebar_label: Ratio Price
 sidebar_position: 1
+description: Relative valuation between two assets, independent of broad market drift.
 ---
 
 # Ratio Price
 
-## Definition
-
-_Placeholder — to be expanded._
-
-Ratio Price describes the weighted midpoint of the order book based on the ratio of bid-to-ask liquidity at each level.
+**Category:** Position
 
 ## Formula
 
+```text
+ratio_price = price(A) / price(B)
 ```
-Ratio Price = Σ(bid_depth[i] × ask_price[i] + ask_depth[i] × bid_price[i]) / Σ(bid_depth[i] + ask_depth[i])
-```
+
+Where `A` is the numerator asset and `B` is the denominator asset.
 
 ## Intuition
 
-_Placeholder._
+Ratio price strips away the broader market and isolates the relative relationship between two assets. If both legs move together because of macro conditions, the ratio stays stable. When the ratio moves, the relative balance between the pair is changing.
 
 ## What It Answers
 
-- Where is the book's center of gravity?
-- Is the book skewed toward the bid or ask side?
+> Where are we?
 
-## Where It Appears in UI
+The current relative valuation between two assets, independent of USD market direction.
 
-See [Chart Panels](/visual-reference/chart-panels) for placement.
+## Visual Representation
 
-## Interpretation
+- Panel: Ratio Price chart
+- Display: continuous line plot of `A / B`
+- Context: read alongside [Displacement](/docs/primitives/displacement)
 
-_Placeholder._
+## Behavioral Interpretation
+
+| Condition | Interpretation |
+|---|---|
+| IF ratio rising | THEN A is outperforming B |
+| IF ratio falling | THEN B is outperforming A |
+| IF ratio flat while both USD prices move | THEN the move is broad-market, not pair-specific |
+| IF ratio slope steepens | THEN relative momentum is building |
 
 ## Failure Modes
 
-_Placeholder._
+- Illiquid pairs can distort the ratio on small prints.
+- Feed lag on one leg can create a temporary false move.
+- Funding or venue-specific distortions can shift the ratio without reflecting spot conviction.
 
 ## Interactions
 
-_Placeholder._
+**With [Displacement](/docs/primitives/displacement):**
+Ratio price is the input; displacement tells you how far current ratio is from recent equilibrium.
 
-## Used In Tutorials
+**With [Net Imbalance](/docs/primitives/net-imbalance):**
+If the ratio rises while net imbalance is positive, structure confirms. If the ratio rises while imbalance is negative, the move is fragile.
 
-- [Absorption vs Expansion](/tutorials/absorption-vs-expansion)
-- [Liquidity Vacuum](/tutorials/liquidity-vacuum)
+**With [Trade Flow](/docs/primitives/trade-flow):**
+Rising ratio with strong buy flow is confirmed participation. Rising ratio with weak flow is passive drift.
 
-## Related Visual Reference
+## Linked Tutorials
 
-- [Chart Panels](/visual-reference/chart-panels)
+- [Exhaustion vs Continuation](/docs/tutorials/exhaustion-vs-continuation)
+- [Momentum Alignment](/docs/tutorials/momentum-alignment)
+- [Structural Trap](/docs/tutorials/structural-trap)

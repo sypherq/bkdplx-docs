@@ -107,6 +107,6 @@ The most common real-world case. Flow is present but not strong. Gravity is posi
 - [Trade Profile](/docs/primitives/trade-profile) — participation quality (who is still active)
 - [SLS](/docs/primitives/sls) — gravity (structural momentum) and curvature (instability)
 - [Depth](/docs/primitives/depth) — friction ahead and behind
-- [Log(A/B) Depth](/docs/primitives/log-depth) — near-mid structural bias as tiebreaker
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth) — near-mid structural bias as tiebreaker
 - [Net Imbalance](/docs/primitives/net-imbalance) — aggregate structural direction
 - [Ratio Price](/docs/primitives/ratio-price) — the price move being evaluated

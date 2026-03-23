@@ -1,39 +1,59 @@
-/**
- * Book Duplex Docs — Custom CSS
- * Dark-first, quant terminal aesthetic
- */
-
 :root {
-  --ifm-color-primary: #00d4ff;
-  --ifm-color-primary-dark: #00bfe6;
-  --ifm-color-primary-darker: #00b3d9;
-  --ifm-color-primary-darkest: #0093b3;
-  --ifm-color-primary-light: #1adaff;
-  --ifm-color-primary-lighter: #26dcff;
-  --ifm-color-primary-lightest: #4de3ff;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.1);
-  --ifm-background-color: #0d0f12;
-  --ifm-navbar-background-color: #0d0f12;
-  --ifm-sidebar-background-color: #111316;
-  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
-  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+  --ifm-color-primary: #f07c68;
+  --ifm-color-primary-dark: #ec6550;
+  --ifm-color-primary-darker: #e75a44;
+  --ifm-color-primary-darkest: #cf422c;
+  --ifm-color-primary-light: #f39382;
+  --ifm-color-primary-lighter: #f59f90;
+  --ifm-color-primary-lightest: #f9c3b8;
+  --ifm-background-color: #071820;
+  --ifm-background-surface-color: #102730;
+  --ifm-font-color-base: #e7edf3;
+  --ifm-color-content-secondary: rgba(231, 237, 243, 0.72);
+  --ifm-link-color: #7adfe0;
+  --ifm-heading-color: #f4f7fb;
+  --ifm-navbar-background-color: rgba(8, 22, 28, 0.78);
+  --ifm-navbar-link-color: rgba(231, 237, 243, 0.84);
+  --ifm-navbar-link-hover-color: #7adfe0;
+  --ifm-footer-background-color: #08171e;
+  --ifm-code-font-size: 0.95rem;
+  --ifm-code-background: rgba(255, 255, 255, 0.06);
+  --ifm-pre-background: #0b1b22;
+  --ifm-font-family-base: "Avenir Next", "IBM Plex Sans", "Segoe UI", sans-serif;
+  --ifm-font-family-monospace: "IBM Plex Mono", "SFMono-Regular", monospace;
+  --ifm-h1-font-size: 3rem;
+  --ifm-leading: 1.75;
+  --ifm-global-radius: 20px;
+  --docusaurus-highlighted-code-line-bg: rgba(122, 223, 224, 0.08);
 }
 
-[data-theme='dark'] {
-  --ifm-color-primary: #00d4ff;
-  --ifm-background-color: #0d0f12;
-  --ifm-background-surface-color: #111316;
-  --ifm-navbar-background-color: #0a0c0e;
-  --ifm-sidebar-background-color: #0f1114;
-  --ifm-toc-border-color: #1e2329;
-  --ifm-color-emphasis-300: #2a2f38;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.08);
+html[data-theme="dark"] {
+  --ifm-color-emphasis-100: rgba(255, 255, 255, 0.04);
+  --ifm-color-emphasis-200: rgba(255, 255, 255, 0.08);
+  --ifm-color-emphasis-300: rgba(255, 255, 255, 0.12);
+  --ifm-color-emphasis-500: rgba(255, 255, 255, 0.28);
+  --ifm-color-emphasis-700: rgba(255, 255, 255, 0.62);
+  --ifm-color-emphasis-900: rgba(255, 255, 255, 0.92);
+  --ifm-menu-color-active: #7adfe0;
+  --ifm-toc-link-color: rgba(231, 237, 243, 0.68);
+  --ifm-menu-color: rgba(231, 237, 243, 0.75);
 }
 
-/* Navbar */
+html,
+body {
+  background:
+    radial-gradient(circle at top, rgba(99, 211, 214, 0.07), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(240, 124, 104, 0.08), transparent 26%),
+    #071820;
+}
+
+body {
+  color: var(--ifm-font-color-base);
+}
+
 .navbar {
-  border-bottom: 1px solid #1e2329;
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(185, 206, 217, 0.1);
   box-shadow: none;
 }
 
@@ -43,84 +63,94 @@
   color: #e8eaed;
 }
 
-/* Sidebar */
+.theme-doc-sidebar-container,
+.table-of-contents,
+.pagination-nav__link,
+.card,
+.menu {
+  border-color: rgba(185, 206, 217, 0.1);
+}
+
+.theme-doc-sidebar-menu {
+  padding-top: 1rem;
+}
+
 .menu__link {
-  font-size: 0.875rem;
-  color: #8b949e;
-  border-radius: 4px;
-  transition: color 0.15s ease, background 0.15s ease;
+  border-radius: 12px;
 }
 
-.menu__link:hover,
+.menu__link:hover {
+  background: rgba(122, 223, 224, 0.08);
+}
+
 .menu__link--active {
-  color: #00d4ff;
-  background: rgba(0, 212, 255, 0.08);
+  background: linear-gradient(90deg, rgba(122, 223, 224, 0.12), rgba(240, 124, 104, 0.08));
 }
 
-.menu__list-item-collapsible .menu__link {
-  font-weight: 600;
-  color: #c9d1d9;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+.theme-doc-markdown h1,
+.theme-doc-markdown h2,
+.theme-doc-markdown h3 {
+  letter-spacing: -0.03em;
 }
 
-/* Content */
-.markdown h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #e8eaed;
-  border-bottom: 1px solid #1e2329;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+.theme-doc-markdown blockquote {
+  border-left: 3px solid #7adfe0;
+  background: rgba(122, 223, 224, 0.06);
+  border-radius: 0 16px 16px 0;
 }
 
-.markdown h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #c9d1d9;
-  margin-top: 2rem;
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(11, 28, 35, 0.64);
 }
 
-.markdown h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #00d4ff;
+.theme-doc-markdown table thead tr {
+  background: rgba(122, 223, 224, 0.08);
 }
 
-/* Code blocks */
+.theme-doc-markdown table tr:nth-child(2n) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.theme-doc-markdown code {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.theme-doc-markdown pre,
 .prism-code {
-  border: 1px solid #1e2329;
-  border-radius: 6px;
+  border: 1px solid rgba(185, 206, 217, 0.08);
+  border-radius: 20px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
-/* Admonitions */
-.alert--info {
-  background: rgba(0, 212, 255, 0.06);
-  border-left: 3px solid #00d4ff;
-}
-
-/* Images */
 .markdown img {
-  border-radius: 6px;
-  border: 1px solid #1e2329;
+  border-radius: 12px;
+  border: 1px solid rgba(185, 206, 217, 0.12);
   max-width: 100%;
-}
-
-/* TOC */
-.table-of-contents__link {
-  font-size: 0.8rem;
-  color: #6e7681;
 }
 
 .table-of-contents__link:hover,
 .table-of-contents__link--active {
-  color: #00d4ff;
+  color: #7adfe0;
 }
 
-/* Footer */
 .footer {
-  border-top: 1px solid #1e2329;
-  background: #0a0c0e;
+  border-top: 1px solid rgba(185, 206, 217, 0.08);
+}
+
+.button {
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 996px) {
+  :root {
+    --ifm-h1-font-size: 2.4rem;
+  }
 }

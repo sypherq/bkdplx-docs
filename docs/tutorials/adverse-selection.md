@@ -20,7 +20,7 @@ Log(A/B):          negative near mid — supply building despite buy flow
 Depth:             supply-side resting orders INCREASING as buy flow executes
 Trade Flow:        aggressive buying — positive trade imbalance
 Trade Profile:     medium trades (500–2K) on buy side near mid
-Imbalance Centroid: negative — supply-side pressure sits closer to mid than demand
+Centroid:          negative — supply-side pressure sits closer to mid than demand
 Net Imbalance:     turning more negative over time (supply growing faster than demand)
 SLS Gravity:       flat or turning negative — structure NOT confirming the buy flow
 ```
@@ -91,9 +91,9 @@ The adverse selection thesis is wrong. The buyer has more capital than the selle
 
 - [Trade Flow](/docs/primitives/trade-flow) — aggressive buying (the "victim" side)
 - [Trade Profile](/docs/primitives/trade-profile) — size and location of buy trades
-- [Log(A/B) Depth](/docs/primitives/log-depth) — negative near mid despite buy flow
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth) — negative near mid despite buy flow
 - [Depth](/docs/primitives/depth) — supply increasing during buy flow
-- [Imbalance Centroid](/docs/primitives/imbalance-centroid) — negative, confirming supply proximity
+- [Centroid](/docs/primitives/centroid) — negative, confirming supply proximity
 - [Trade Imbalance](/docs/primitives/trade-imbalance) — positive but diverging from structure
 - [SLS](/docs/primitives/sls) — gravity not confirming buy side
 - [Displacement](/docs/primitives/displacement) — mild positive that structure does not support

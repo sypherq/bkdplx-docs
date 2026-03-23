@@ -1,6 +1,8 @@
-# Imbalance Centroid
+# Centroid
 
 **Category:** Structure
+
+**Canonical Name:** Imbalance Centroid
 
 ---
 
@@ -62,7 +64,7 @@ The distance from mid-price where the balance of structural demand vs supply is 
 
 ## Interactions
 
-**With [Log(A/B) Depth](/docs/primitives/log-depth):**
+**With [Log(A/B) Depth](/docs/primitives/log-ab-depth):**
 Log(A/B) shows the full spatial profile of imbalance. The centroid is the single-number summary of that profile's center of mass. Use Log(A/B) when you need the map; use centroid when you need the summary.
 
 **With [Net Imbalance](/docs/primitives/net-imbalance):**

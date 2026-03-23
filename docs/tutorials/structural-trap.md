@@ -21,7 +21,7 @@ Log(A/B):          NEGATIVE near mid — supply exceeds demand at execution leve
 Trade Flow:        aggressive buying — positive trade imbalance
 Trade Profile:     medium trades (500–2K) buying near mid
 Net Imbalance:     NEGATIVE — aggregate book favors supply
-Imbalance Centroid: NEGATIVE — center of structural pressure is on supply side, near mid
+Centroid:          NEGATIVE — center of structural pressure is on supply side, near mid
 SLS Gravity:       flat or slightly NEGATIVE — structure does NOT confirm the move
 SLS Curvature:     elevated — structural instability, regime is unsettled
 Depth:             supply thick near and ahead, demand thin behind
@@ -104,9 +104,9 @@ The buyer is larger and more determined than the resting supply. Supply is consu
 ## Primitives Used
 
 - [Trade Flow](/docs/primitives/trade-flow) — the bullish flow that creates the trap
-- [Log(A/B) Depth](/docs/primitives/log-depth) — the structural opposition (negative near mid)
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth) — the structural opposition (negative near mid)
 - [Net Imbalance](/docs/primitives/net-imbalance) — aggregate structural bias against the flow
-- [Imbalance Centroid](/docs/primitives/imbalance-centroid) — proximity of structural opposition
+- [Centroid](/docs/primitives/centroid) — proximity of structural opposition
 - [SLS](/docs/primitives/sls) — gravity (not confirming) and curvature (instability)
 - [Displacement](/docs/primitives/displacement) — the extension created by flow in hostile territory
 - [Depth](/docs/primitives/depth) — supply thickness creating the trap

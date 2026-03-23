@@ -1,0 +1,253 @@
+.page {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  padding: 5.5rem 0 3rem;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 18%, rgba(114, 223, 224, 0.14), transparent 22%),
+    radial-gradient(circle at 80% 14%, rgba(246, 119, 96, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(10, 27, 34, 0.2), rgba(10, 27, 34, 0));
+  pointer-events: none;
+}
+
+.heroShell {
+  position: relative;
+}
+
+.heroFrame {
+  position: relative;
+  padding: 2.4rem;
+  border: 1px solid rgba(185, 206, 217, 0.14);
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(16, 39, 48, 0.92), rgba(10, 26, 33, 0.94)),
+    radial-gradient(circle at top, rgba(111, 208, 214, 0.08), transparent 40%);
+  box-shadow:
+    0 24px 80px rgba(4, 10, 14, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  overflow: hidden;
+}
+
+.heroFrame::before,
+.heroFrame::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  width: 42rem;
+  height: 42rem;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.heroFrame::before {
+  top: -18rem;
+  right: -14rem;
+  background: radial-gradient(circle, rgba(102, 195, 201, 0.1), transparent 65%);
+}
+
+.heroFrame::after {
+  bottom: -20rem;
+  left: -18rem;
+  background: radial-gradient(circle, rgba(242, 120, 100, 0.08), transparent 68%);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.brandMark {
+  font-size: clamp(1.7rem, 4vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  background: linear-gradient(90deg, #74dfe0 0%, #f27963 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.badge {
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(185, 206, 217, 0.18);
+  border-radius: 999px;
+  color: rgba(225, 232, 238, 0.8);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(11, 23, 29, 0.45);
+}
+
+.title {
+  max-width: 13ch;
+  margin: 0 0 1rem;
+  font-size: clamp(3rem, 9vw, 5.8rem);
+  line-height: 0.94;
+  letter-spacing: -0.06em;
+}
+
+.subtitle {
+  max-width: 48rem;
+  margin: 0;
+  color: rgba(225, 232, 238, 0.76);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.primaryAction {
+  color: #041117 !important;
+  background: linear-gradient(90deg, #7ae0df 0%, #f07c68 100%);
+  box-shadow: 0 18px 50px rgba(114, 223, 224, 0.18);
+}
+
+.secondaryAction {
+  border: 1px solid rgba(185, 206, 217, 0.18);
+  color: var(--ifm-font-color-base) !important;
+  background: rgba(9, 21, 27, 0.5);
+}
+
+.signalStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2.4rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(185, 206, 217, 0.12);
+}
+
+.signalStrip > div {
+  padding: 1rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.signalLabel,
+.sectionEyebrow,
+.cardKicker,
+.ruleLabel {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  color: rgba(225, 232, 238, 0.56);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: 1.25rem 0 3rem;
+}
+
+.sectionHeader {
+  margin-bottom: 1.5rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: block;
+  min-height: 12rem;
+  padding: 1.35rem;
+  border: 1px solid rgba(185, 206, 217, 0.12);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(18, 42, 51, 0.75), rgba(10, 24, 30, 0.88));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+  text-decoration: none;
+  transform: translateY(-3px);
+  border-color: rgba(114, 223, 224, 0.28);
+  box-shadow: 0 18px 40px rgba(4, 10, 14, 0.24);
+}
+
+.cardBody {
+  display: block;
+  color: rgba(225, 232, 238, 0.78);
+  line-height: 1.7;
+}
+
+.frameworkPanel {
+  padding: 1.8rem;
+  border: 1px solid rgba(185, 206, 217, 0.12);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(17, 40, 49, 0.92), rgba(10, 24, 30, 0.96));
+}
+
+.frameworkBody {
+  max-width: 60rem;
+  color: rgba(225, 232, 238, 0.76);
+  line-height: 1.8;
+}
+
+.frameworkRules {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.frameworkRules > div {
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(185, 206, 217, 0.08);
+}
+
+.frameworkRules code {
+  display: block;
+  white-space: normal;
+  color: #dce8ef;
+  background: transparent;
+  padding: 0;
+}
+
+@media (max-width: 996px) {
+  .signalStrip,
+  .cardGrid,
+  .frameworkRules {
+    grid-template-columns: 1fr;
+  }
+
+  .heroFrame {
+    padding: 1.5rem;
+  }
+
+  .badgeRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

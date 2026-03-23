@@ -60,7 +60,7 @@ The relative balance of demand vs supply liquidity at each price level, expresse
 
 ## Interactions
 
-**With [Imbalance Centroid](/docs/primitives/imbalance-centroid):**
+**With [Centroid](/docs/primitives/centroid):**
 Log(A/B) shows the imbalance *at each level*. The centroid compresses this into a single location: where is the center of mass of that imbalance? Together they answer both "which direction" and "how close."
 
 **With [Net Imbalance](/docs/primitives/net-imbalance):**

@@ -22,7 +22,7 @@ Log(A/B):          POSITIVE near mid and across most visible buckets
 Depth:             thin supply ahead, thick demand behind
 Cumulative Depth:  demand cumulative >> supply cumulative
 Net Imbalance:     strongly POSITIVE
-Imbalance Centroid: POSITIVE, near mid — demand pressure is proximate
+Centroid:          POSITIVE, near mid — demand pressure is proximate
 
 Trade Flow:        aggressive buying — strong positive trade imbalance
 Trade Profile:     large trades (> 10K) concentrated on buy side near mid
@@ -128,11 +128,11 @@ SLS Gravity:       negative and accelerating
 
 - [Ratio Price](/docs/primitives/ratio-price) — the trending price confirming directional move
 - [Displacement](/docs/primitives/displacement) — position measurement (how extended)
-- [Log(A/B) Depth](/docs/primitives/log-depth) — structural imbalance across all levels
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth) — structural imbalance across all levels
 - [Depth](/docs/primitives/depth) — friction analysis (thin supply, thick demand)
 - [Cumulative Depth](/docs/primitives/cumulative-depth) — total friction measurement
 - [Net Imbalance](/docs/primitives/net-imbalance) — aggregate structural bias
-- [Imbalance Centroid](/docs/primitives/imbalance-centroid) — proximity of structural pressure
+- [Centroid](/docs/primitives/centroid) — proximity of structural pressure
 - [Trade Flow](/docs/primitives/trade-flow) — active participation direction
 - [Trade Profile](/docs/primitives/trade-profile) — participation quality (size tiers)
 - [Trade Imbalance](/docs/primitives/trade-imbalance) — aggregate flow bias

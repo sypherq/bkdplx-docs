@@ -1,98 +1,92 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Book Duplex Docs',
-  tagline: 'Quantitative market microstructure — primitives, tutorials, and visual reference',
-  favicon: 'img/favicon.ico',
-
-  url: 'https://wiki.bkdplx.com',
-  baseUrl: '/',
-
-  organizationName: 'sypherq',
-  projectName: 'bkdplx-docs',
-
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-
+  title: "BkDplx Docs",
+  tagline: "Primitives, tutorials, visual reference, and deterministic market reasoning.",
+  url: "https://wiki.bkdplx.com",
+  baseUrl: "/",
+  organizationName: "sypherq",
+  projectName: "bkdplx-docs",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
-
   presets: [
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      "@docusaurus/preset-classic",
+      {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
-          editUrl: 'https://github.com/sypherq/bkdplx-docs/edit/main/',
+          routeBasePath: "docs",
+          sidebarPath: require.resolve("./sidebars.js"),
+          breadcrumbs: true,
+          editUrl: "https://github.com/sypherq/bkdplx-docs/edit/main/",
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+      },
     ],
   ],
-
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
-      colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
-      },
-      navbar: {
-        title: 'Book Duplex',
-        logo: {
-          alt: 'Book Duplex Logo',
-          src: 'img/logo.svg',
+  themeConfig: {
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: true,
+      respectPrefersColorScheme: true,
+    },
+    navbar: {
+      title: "BkDplx Docs",
+      hideOnScroll: true,
+      items: [
+        { to: "/docs/introduction/overview", label: "Overview", position: "left" },
+        { to: "/docs/primitives/ratio-price", label: "Primitives", position: "left" },
+        { to: "/docs/tutorials/absorption-vs-expansion", label: "Tutorials", position: "left" },
+        { to: "/docs/visual-reference/chart-panels", label: "Visual Reference", position: "left" },
+        { to: "/docs/frameworks/pressure-friction-participation", label: "Frameworks", position: "left" },
+        { href: "https://github.com/sypherq/bkdplx-docs", label: "GitHub", position: "right" },
+        { href: "https://bkdplx.com", label: "BkDplx", position: "right" },
+      ],
+    },
+    footer: {
+      style: "dark",
+      links: [
+        {
+          title: "Docs",
+          items: [
+            { label: "Overview", to: "/docs/introduction/overview" },
+            { label: "Mental Model", to: "/docs/introduction/mental-model" },
+          ],
         },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'docsSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
-          {
-            href: 'https://github.com/sypherq/bkdplx-docs',
-            label: 'GitHub',
-            position: 'right',
-          },
-        ],
+        {
+          title: "Reference",
+          items: [
+            { label: "Primitives", to: "/docs/primitives/ratio-price" },
+            { label: "Visual Reference", to: "/docs/visual-reference/chart-panels" },
+          ],
+        },
+        {
+          title: "Frameworks",
+          items: [
+            { label: "Pressure, Friction, Participation", to: "/docs/frameworks/pressure-friction-participation" },
+            { label: "Alignment vs Conflict", to: "/docs/frameworks/alignment-vs-conflict" },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} Book Duplex.`,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: false,
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              { label: 'Introduction', to: '/introduction/overview' },
-              { label: 'Primitives', to: '/primitives/ratio-price' },
-              { label: 'Tutorials', to: '/tutorials/absorption-vs-expansion' },
-            ],
-          },
-          {
-            title: 'Reference',
-            items: [
-              { label: 'Visual Reference', to: '/visual-reference/chart-panels' },
-              { label: 'Frameworks', to: '/frameworks/pressure-friction-participation' },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Book Duplex.`,
-      },
-      prism: {
-        theme: require('prism-react-renderer').themes.dracula,
-        darkTheme: require('prism-react-renderer').themes.dracula,
-      },
-    }),
+    },
+    prism: {
+      additionalLanguages: ["bash"],
+    },
+  },
 };
 
 module.exports = config;

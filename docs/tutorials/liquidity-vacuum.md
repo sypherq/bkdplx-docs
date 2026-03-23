@@ -95,5 +95,5 @@ The vacuum resolves without a move. Market makers re-enter, depth normalizes, cu
 - [Displacement](/docs/primitives/displacement) — flat before the event, rapid movement after
 - [SLS](/docs/primitives/sls) — curvature detecting structural instability
 - [Trade Flow](/docs/primitives/trade-flow) — the directional trigger that breaks the vacuum
-- [Log(A/B) Depth](/docs/primitives/log-depth) — balanced ratio masking absolute thinness
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth) — balanced ratio masking absolute thinness
 - [Net Imbalance](/docs/primitives/net-imbalance) — near-zero confirming symmetric withdrawal

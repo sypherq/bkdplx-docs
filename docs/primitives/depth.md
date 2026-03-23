@@ -69,7 +69,7 @@ The highest-value structural combination. Displacement tells you how far price i
 **With [Trade Flow](/docs/primitives/trade-flow) / [Trade Profile](/docs/primitives/trade-profile):**
 Flow hitting thick depth = absorption (orders being consumed). Flow hitting thin depth = expansion (price slicing through). This distinction is the foundation of the Absorption vs Expansion tutorial.
 
-**With [Log(A/B) Depth](/docs/primitives/log-depth):**
+**With [Log(A/B) Depth](/docs/primitives/log-ab-depth):**
 Raw depth shows absolute USD values. Log(A/B) transforms depth into a relative imbalance ratio, making structural bias visible at a glance.
 
 **With [SLS](/docs/primitives/sls):**

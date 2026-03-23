@@ -59,10 +59,10 @@ Whether the total resting liquidity across the visible book favors demand or sup
 
 ## Interactions
 
-**With [Log(A/B) Depth](/docs/primitives/log-depth):**
+**With [Log(A/B) Depth](/docs/primitives/log-ab-depth):**
 Net imbalance is the aggregate; Log(A/B) is the spatial breakdown. They answer the same question at different resolutions. Use net imbalance for the quick read, Log(A/B) for the detailed map.
 
-**With [Imbalance Centroid](/docs/primitives/imbalance-centroid):**
+**With [Centroid](/docs/primitives/centroid):**
 Net imbalance tells you *how much*. Centroid tells you *where*. A positive net imbalance with a near-mid centroid means the pressure is immediate. The same net imbalance with a far centroid means the pressure is latent.
 
 **With [Trade Flow](/docs/primitives/trade-flow):**

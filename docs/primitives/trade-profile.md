@@ -66,7 +66,7 @@ The distribution of executed trades by size tier and price level, revealing part
 **With [Depth](/docs/primitives/depth):**
 Profile shows where flow is executing. Depth shows what rests there. Buying into thick supply = absorption. Buying into thin supply = expansion. The profile-depth interaction is the core of the Absorption vs Expansion framework.
 
-**With [Imbalance Centroid](/docs/primitives/imbalance-centroid):**
+**With [Centroid](/docs/primitives/centroid):**
 Centroid shows where structural pressure sits. Profile shows where execution happens. If execution is concentrated at the centroid, flow is interacting directly with the structural pressure point. If execution is far from the centroid, the interaction is indirect.
 
 **With [Displacement](/docs/primitives/displacement):**

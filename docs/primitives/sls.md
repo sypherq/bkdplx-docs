@@ -4,7 +4,7 @@
 
 ---
 
-## Sub-Primitives
+## Formula
 
 SLS is a composite primitive containing three distinct signals:
 
@@ -88,7 +88,7 @@ Gravity aligned with displacement direction = structural confirmation of the pri
 **With [Trade Flow](/docs/primitives/trade-flow):**
 SLS shows structural evolution; flow shows what is causing it. Rising gravity with matching flow = confirmed structural shift. Rising gravity without flow = passive structural drift (less reliable).
 
-**With [Log(A/B) Depth](/docs/primitives/log-depth):**
+**With [Log(A/B) Depth](/docs/primitives/log-ab-depth):**
 The current L(k) is one time-slice of the SLS RAW heatmap. SLS adds the temporal context that a single snapshot cannot provide.
 
 ---

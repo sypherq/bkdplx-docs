@@ -1,39 +1,113 @@
 ---
 id: mental-model
-title: System Mental Model
+title: Mental Model
 sidebar_label: Mental Model
 sidebar_position: 2
+description: The Position, Structure, Flow framework behind Book Duplex.
 ---
 
-# System Mental Model
+# Mental Model
 
-Book Duplex is organized around a single core insight: **price moves because of imbalance, not despite it.** The tool measures the structure of that imbalance across multiple dimensions simultaneously.
+Every primitive in Book Duplex belongs to one of three buckets:
 
-## The Three Layers
+1. Position
+2. Structure
+3. Flow
 
-### 1. Structural Layer — The Book
-The limit order book defines the passive landscape. Depth, displacement, and ratio price all describe the shape, weight, and position of resting liquidity. These tell you *where* the market is willing to transact, and *how much* defense exists at key levels.
+Everything else is a transformation or interaction of those three.
 
-### 2. Flow Layer — The Tape
-Trade flow primitives (trade flow, trade profile, trade imbalance) describe the behavior of *aggressive participants*. These are actors who are willing to pay the spread to transact immediately. The pattern and velocity of this aggression determines whether the market will hold or break through structural levels.
+## Position
 
-### 3. Synthesis Layer — The Signal
-Net imbalance, SLS, and centroid synthesize book and flow data into composite signals. These tell you the *current state of competition* between buyers and sellers, and whether one side is gaining structural dominance.
+Position answers where the pair is relative to equilibrium.
 
-## Reading the Tool
+- [Ratio Price](/docs/primitives/ratio-price) tells you the relative valuation.
+- [Displacement](/docs/primitives/displacement) tells you how stretched that valuation is.
 
-Book Duplex is not a prediction engine. It is a **state description engine**. At any moment, it tells you:
+Position is the state of price. It does not explain whether the move is allowed to continue.
 
-- What the book looks like (structure)
-- What participants are doing (flow)
-- Whether the two are aligned or diverging (synthesis)
+## Structure
 
-## Determinism
+Structure answers what liquidity permits.
 
-A key design principle: interpretations should be **deterministic given defined inputs**. The same book structure + the same flow pattern should produce the same reading every time. Tutorials in this documentation follow that principle: they define rules, not heuristics.
+- [Depth](/docs/primitives/depth)
+- [Cumulative Depth](/docs/primitives/cumulative-depth)
+- [Log(A/B) Depth](/docs/primitives/log-ab-depth)
+- [Net Imbalance](/docs/primitives/net-imbalance)
+- [Centroid](/docs/primitives/centroid)
+- [SLS](/docs/primitives/sls)
 
-## Related
+Structure is the terrain. It defines friction, support, resistance, and how that terrain is changing through time.
 
-- [Overview](/introduction/overview)
-- [Frameworks: Pressure, Friction, Participation](/frameworks/pressure-friction-participation)
-- [Frameworks: Alignment vs Conflict](/frameworks/alignment-vs-conflict)
+## Flow
+
+Flow answers what participants are actually doing.
+
+- [Trade Flow](/docs/primitives/trade-flow)
+- [Trade Profile](/docs/primitives/trade-profile)
+- [Trade Imbalance](/docs/primitives/trade-imbalance)
+
+Flow is commitment. It is the capital that either confirms or fails to confirm the structural picture.
+
+## The Core Compression
+
+The whole system can be reduced to:
+
+```text
+pressure + friction + participation
+```
+
+- pressure: directional structural and flow bias
+- friction: how hard the book makes movement
+- participation: whether real traders are funding the move
+
+## How Edge Appears
+
+Edge does not come from a single metric. It comes from either:
+
+- alignment
+- conflict
+
+Alignment means the system agrees. Conflict means one layer is lying, lagging, or being overrun.
+
+## Canonical Interaction Examples
+
+### Displacement + Depth
+
+- stretched + thin liquidity ahead -> continuation
+- stretched + thick opposing liquidity -> rejection
+
+### Log(A/B) + Centroid
+
+- positive near-mid imbalance -> immediate structural support
+- positive imbalance far away -> latent support, not immediate support
+
+### Trade Profile + Depth
+
+- aggressive buying into thick supply -> absorption
+- aggressive buying into thin supply -> expansion
+
+### Flow vs Structure
+
+- agreement -> stable moves
+- conflict -> traps, adverse selection, or reversals
+
+## Full-System Read
+
+The highest-quality continuation read looks like:
+
+```text
+displacement positive
++ Log(A/B) positive near mid
++ centroid positive
++ trade flow positive
++ SLS gravity rising
+-> continuation probability increases
+```
+
+The inverse uses the same logic in reverse.
+
+## Next Steps
+
+- Study the individual [Primitives](/docs/primitives/ratio-price)
+- Then move into [Tutorials](/docs/tutorials/absorption-vs-expansion)
+- Keep [Chart Panels](/docs/visual-reference/chart-panels) open while reading
