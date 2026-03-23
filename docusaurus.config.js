@@ -9,7 +9,11 @@ const config = {
   organizationName: "sypherq",
   projectName: "bkdplx-docs",
   onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
