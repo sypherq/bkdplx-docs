@@ -4,6 +4,7 @@
 const config = {
   title: "BkDplx Docs",
   tagline: "Primitives, tutorials, visual reference, and deterministic market reasoning.",
+  favicon: "img/bkdplx-favicon.svg",
   url: "https://wiki.bkdplx.com",
   baseUrl: "/",
   organizationName: "sypherq",
